@@ -1,0 +1,284 @@
+@font-face {
+  font-family: "Muller-Trial-Regular";
+  src: url("../fonts/Muller-Trial-Regular.eot");
+  src: url("../fonts/Muller-Trial-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Muller-Trial-Regular.svg#Muller-Trial-Regular") format("svg"),
+    url("../fonts/Muller-Trial-Regular.ttf") format("truetype"),
+    url("../fonts/Muller-Trial-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller-Trial-Bold";
+  src: url("../fonts/Muller-Trial-Bold.eot");
+  src: url("../fonts/Muller-Trial-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Muller-Trial-Bold.svg#Muller-Trial-Bold") format("svg"),
+    url("../fonts/Muller-Trial-Bold.ttf") format("truetype"),
+    url("../fonts/Muller-Trial-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller-Trial-ExtraBold";
+  src: url("../fonts/Muller-Trial-ExtraBold.eot");
+  src: url("../fonts/Muller-Trial-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Muller-Trial-ExtraBold.svg#Muller-Trial-ExtraBold")
+      format("svg"),
+    url("../fonts/Muller-Trial-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Muller-Trial-ExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #f1efef;
+  font-family: "Muller-Trial-Regular";
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 120px;
+  z-index: 100;
+  position: fixed;
+}
+.toggle {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+.toggle span {
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background: #4ddd87;
+  transition: 0.5s;
+}
+.toggle span:nth-child(1) {
+  transform: translateY(-15px);
+  width: 15px;
+  left: 15px;
+}
+.toggle span:nth-child(3) {
+  transform: translateY(15px);
+  width: 10px;
+  left: 15px;
+}
+.toggle.active span:nth-child(1) {
+  width: 20px;
+  transform: translateY(0px) rotate(45deg);
+}
+.toggle.active span:nth-child(2) {
+  transform: translateX(60px);
+}
+.toggle.active span:nth-child(3) {
+  width: 20px;
+  transform: translateY(0px) rotate(315deg);
+}
+header.active {
+  transform: translateX(0);
+  transition: 0.5s;
+}
+.logo-title {
+  cursor: pointer;
+  font-family: "Muller-Trial-Bold";
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+ul li {
+  font-size: 18;
+  font-weight: -200;
+  padding: 5px 17px;
+}
+ul li a {
+  text-decoration: none;
+  color: #000;
+}
+ul li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+ul li:hover a::after {
+  transform: scale(1);
+}
+.appointment-btn {
+  padding: 10px 20px;
+  font-size: 12px;
+  color: #4ddd87;
+  border-radius: 20px;
+  border: solid 2px #4ddd87;
+}
+.appointment-btn:hover {
+  background-color: #4ddd87;
+  color: #fff;
+}
+.wrapper {
+  padding: 120px 30px;
+  position: relative;
+}
+.left {
+  position: absolute;
+  padding: 140px 85px;
+}
+.right {
+  position: absolute;
+  right: 0;
+}
+.lozung {
+  max-width: 500px;
+  font-size: 48px;
+  font-family: "Muller-Trial-ExtraBold";
+}
+.lozung span {
+  color: #4ddd87;
+}
+.desc {
+  font-size: 18px;
+  max-width: 500px;
+  max-height: 83px;
+  padding-top: 30px;
+  line-height: 25px;
+  margin-bottom: 60px;
+}
+.more {
+  width: 172px;
+  height: 70px;
+  font-family: "Muller-Trial-Bold";
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  border-radius: 37.5px;
+  background-color: #45d980;
+}
+.right-img {
+  right: 0;
+}
+.eclipse-right {
+  position: relative;
+  margin-top: -20px;
+}
+.tooth-right {
+  position: absolute;
+  left: -75px;
+  top: 20px;
+  max-width: 530px;
+  max-height: 530px;
+}
+@media (max-width: 1260px) {
+  .lozung {
+    font-size: 32px;
+    max-width: 300px;
+  }
+  .desc {
+    font-size: 14px;
+    max-width: 300px;
+    margin-bottom: 70px;
+  }
+  .more {
+    width: 120px;
+    height: 60px;
+  }
+  .eclipse-right {
+    max-width: 600px;
+    max-height: 600px;
+  }
+  .tooth-right {
+    max-width: 480px;
+    min-width: 480px;
+  }
+}
+@media (max-width: 1000px) {
+  header {
+    padding: 30px 50px;
+  }
+  .left {
+    padding: 140px 20px;
+  }
+
+  .eclipse-right {
+    max-width: 480px;
+    max-height: 480px;
+  }
+  .tooth-right {
+    max-width: 330px;
+    min-width: 330px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    display: block;
+    width: 350px;
+    padding: 0;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    transform: translateX(-350px);
+    transition: 0.5s;
+  }
+  .logo-title {
+    padding: 20px 20px;
+    margin-bottom: 200px;
+  }
+  .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .right {
+    z-index: -1;
+    filter: blur(45px);
+
+  }
+  ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 100px;
+  }
+  ul li {
+    font-size: 22px;
+  }
+  .appointment-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 20px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 481px) {
+  header {
+    width: 280px;
+    transform: translateX(-280px);
+  }
+}
