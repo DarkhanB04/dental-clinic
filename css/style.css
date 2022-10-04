@@ -59,8 +59,8 @@ header {
   display: none;
   position: absolute;
   z-index: 1;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   width: 50px;
   height: 50px;
   overflow: hidden;
@@ -143,11 +143,13 @@ ul li:hover a::after {
   color: #fff;
 }
 .wrapper {
-  padding: 120px 30px;
   position: relative;
+  width: 100%;
+  padding: 120px 30px;
+  display: flex;
 }
 .left {
-  position: absolute;
+  position: relative;
   padding: 140px 85px;
 }
 .right {
@@ -193,6 +195,76 @@ ul li:hover a::after {
   top: 20px;
   max-width: 530px;
   max-height: 530px;
+}
+.patient-health {
+  display: flex;
+  gap: 120px;
+  width: 1100px;
+  height: 519px;
+  top: 200px;
+  border-radius: 0 90px 90px 0;
+  background-color: #fff;
+  box-shadow: 0px 10px 33px rgba(0, 0, 0, 0.08);
+  margin-bottom: 260px;
+}
+.left-imgs {
+  display: inline-block;
+  position: relative;
+  left: 120px;
+  top: 101px;
+}
+.indus {
+  display: block;
+  margin-bottom: 23px;
+}
+.under-indus {
+  display: block;
+}
+.right-patient-health {
+  position: relative;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  left: 110px;
+}
+.patient-title {
+  font-family: "Muller-Trial-ExtraBold";
+}
+.patient-desc {
+  font-family: "Muller-Trial-Regular";
+  font-size: 18px;
+  max-width: 488px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.from-us-title {
+  text-align: center;
+  color: #08CCC0;
+  margin-bottom: 40px;
+}
+.row{
+display: flex;
+justify-content: center;
+gap: 7px;
+}
+.col{
+  width: 422px;
+  height: 330px;
+}
+.title-img {
+  margin-top: 35px;
+  margin-left: 35px;
+  width: 82px;
+  height: 82px;
+  background-color: #47E99B;
+  border-radius: 5px;
+}
+.img-block{
+  text-align: center;
+}
+.img-in-title{
+  margin-top: 18.5px;
 }
 @media (max-width: 1260px) {
   .lozung {
@@ -257,7 +329,6 @@ ul li:hover a::after {
   .right {
     z-index: -1;
     filter: blur(45px);
-
   }
   ul {
     flex-direction: column;
